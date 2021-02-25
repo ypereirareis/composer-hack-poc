@@ -1,0 +1,28 @@
+{
+  "name": "ypereirareis/composer-hack-poc",
+  "description": "Dependency to demonstrate composer deps vulnerability",
+  "keywords": [
+    "composer",
+    "hack"
+  ],
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "devops@sfam.eu"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*"
+  },
+  "autoload": {
+    "psr-4": { "Sfk\\ComposerHackPoc\\" : "src/" }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "echo \"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\""
+    ]
+  }
+}
